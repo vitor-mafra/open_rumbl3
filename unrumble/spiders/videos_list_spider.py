@@ -15,7 +15,6 @@ class VideosListSpider(scrapy.Spider):
             video_url = video_links[video_links.find('href="') + len('href="') : video_links.find('">')].strip()
             video_image_src = video_links[video_links.find('src="') + len('src="'):(video_links.find(' alt'))].strip()
             
-            raw = video.get()
             print(f"url-> {video_url}")
             print(f"src-> {video_image_src}")
 
